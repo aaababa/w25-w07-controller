@@ -1,14 +1,12 @@
 package kr.ac.kumoh.s20240042.w25_w07_controller.service
 
-import kr.ac.kumoh.s20240042.w25_w07_controller.model.Song
+import kr.ac.kumoh.s20240042.w25_w07_controller.repository.SongRepository
 import org.springframework.stereotype.Service
 
 @Service
 
-class SongService {
-    fun getAllSongs() : List<Song> {
-        return listOf(
-            Song(1, "Golden", "HUNTR/X")
-        )
-    }
+class SongService(
+    private val repository: SongRepository
+) {
+    fun getAllSongs() = repository.findAll()
 }
