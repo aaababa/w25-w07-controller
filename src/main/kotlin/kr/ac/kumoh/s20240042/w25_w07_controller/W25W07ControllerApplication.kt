@@ -6,6 +6,7 @@ import org.springframework.boot.runApplication
 @SpringBootApplication
 class W25W07ControllerApplication
 
+
 fun main(args: Array<String>) {
 	runApplication<W25W07ControllerApplication>(*args)
 }
